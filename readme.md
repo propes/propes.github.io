@@ -9,7 +9,7 @@ This blog uses jekyll because of it's easy integration with github pages.
 Install ruby:
 
 ```sh
-sudo snap ruby
+sudo snap install ruby --classic
 ```
 
 Install gcc and make:
