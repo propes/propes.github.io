@@ -29,4 +29,4 @@ At this point it might be tempting to wonder why we don't just assign extremely 
 
 Now that we've made the case for why estimates matter, the next part looks at how we might come up with good estimates in the first place.
 
-[Part 2: How to get better at estimating user stories]({% post_url 2023-06-22-how-to-estimate-better %})
+[Part 2: How to get great user story estimates]({% post_url 2023-06-22-how-to-estimate-better %})

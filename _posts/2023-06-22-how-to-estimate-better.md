@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to get better at estimating user stories"
+title: "How to get great user story estimates"
 date: 2023-06-22 11:00:00 +1000
 tag: agile
 ---
