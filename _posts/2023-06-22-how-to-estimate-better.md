@@ -1,35 +1,46 @@
 ---
 layout: post
-title: "How to get great user story estimates"
+title: "How to get great user stories estimates"
 date: 2023-06-22 11:00:00 +1000
-tag: agile
+tag: agile, user stories
 ---
 
 [Part 1: Why good estimates matter]({% post_url 2023-06-21-why-estimates-matter %})
 
-In the [previous blog post]({% post_url 2023-06-21-why-estimates-matter %}) in this two-part series we built a case for why good user story estimates matter. In this part we'll look at how we might achieve good estimates in the first place.
+In the [previous blog post]({% post_url 2023-06-21-why-estimates-matter %}) in this two-part series we made a case for why good user story estimates matter. In this next part we'll look at how we might achieve those good estimates.
 
-I guess it's first worth clarifying that by a good estimate I mean an estimate that is a realistic guide to the actual time required to complete the task. After all bad estimates can fall either side of this. An estimate can be bad because it's too small, which means the task overruns and leads to unexpected delays. However, an estimate can also be bad if it's too large because of [Parkinson's law](https://www.atlassian.com/blog/productivity/what-is-parkinsons-law) and the tendency for the task to expand to fill the time allocated, even if it's not needed. So a healthy amount of pressure is needed to give focus.
+I guess it's first worth clarifying that by a "good" estimate I mean an estimate that is a realistic guide to the actual time required to complete the task. As such, bad estimates can fall either side of this. An estimate can be bad because it's too small, which means the task overruns and leads to unexpected delays. However, an estimate can also be bad if it's too large because of [Parkinson's law](https://www.atlassian.com/blog/productivity/what-is-parkinsons-law) and the tendency for the task to expand to fill the time allocated, even if it's not needed. So a healthy amount of pressure is useful to give focus.
 
-With that established it might be worth looking at the reasons why we get poor estimates in the first place. Here are some of the most common ones:
+With that established let's look at the reasons why we get poor estimates in the first place. Here are some of the most common ones:
 
 - Not all the requirements are captured or they're vague.
-- There are no visualisations (e.g. UI wireframes, architecture diagrams, etc) to give a clear picture of what needs to be built.
-- There's inherent uncertainty in the story (maybe we're not even sure if it can be done).
-- Complexities emerge that weren't thought of upfront, aka "unknown unknowns".
-- Sessions in which estimations happen are poorly planned (too rushed or too long).
+- The estimate only covers development and not all the other activities required to get to the Definition of Done.
+- There are no visualisations to give a clear picture of what needs to be built, e.g. UI wireframes, architecture diagrams, etc.
+- There's a lot of uncertainty surrounding the story.
+- Complexity emerges during development that wasn't planned for.
+- Estimation sessions are poorly planned (too rushed or too long).
 
 In the following sections we'll look at ways we can improve our estimations by addressing each of these issues.
 
 ### Capturing all the requirements
 
-Believe it or not one-line stories don't produce good estimates, even if they're in the magical "As a... I want... so that" format. At the end of the day, for a dev to complete a story they need to get all of the requirements at some point, whether that means getting them on the fly through back and forth communication with the Product Owner, finding out about them during the PO demo after they've finished development or just filling the blanks in themselves. All of these ways represent time spent and are less efficient that the Product Owner simplify thinking about and listing the requirements out up front. Plus you get the added bonus that those requirements can be used to inform the estimation.
+Believe it or not one-line stories don't produce good estimates, even if they're in the magical "As a... I want... so that" format. At the end of the day, for a dev to complete a story they need to get all of the requirements at some point, whether that means getting them on the fly through back and forth communication with the Product Owner, finding out about them during the PO demo after they've finished development or just filling the blanks in themselves. All of these ways represent time spent and are less efficient that the Product Owner simply thinking about and listing the requirements out up front. Plus you get the added bonus that those requirements can be used to inform the estimation.
 
 So it should come as no surprise that capturing as many requirements as possible leads to much better estimates. Of course, requirements will occasionally be missed and requirements can change but this is about best effort. Also, the more that are captured the more likely it is the team will identify any that are missing during the estimation session. If they're starting from a blank slate then they'll simply be overwhelmed by the scale of the information gathering required and won't ask any questions.
 
-Yes, scoping out a story can be hard or overwhelming and as an inexperienced Product Owner or Business Analyst it can be tempting to just pass the ball over to the devs and hope they can run with it. In fact, I'd say incentives unfortunately often align in this direction. However, it really matters when it comes to improving estimates and if this is something you're struggling with as a PO or a BA then bring in a dev or another team member to help you with this crucial first step (more on this in the pre-refinement section below). As mentioned above it's work that someone will have to do at some point anyway to get to a finished story and I guarantee it's better to do it upfront.
+Yes, scoping out a story can be hard or overwhelming and as an inexperienced Product Owner or Business Analyst it can be tempting to just pass the ball over to the devs and hope they can run with it. However, it really matters when it comes to improving estimates. If this is something you're struggling with as a PO or a BA then bring in a dev or another team member to help you with this crucial first step (more on this in the pre-refinement section below). As mentioned above it's work that someone will have to do at some point anyway to get to a finished story and I guarantee it's better to do it upfront.
 
 It's also the first step to ensuring that the problem has been properly thought through and that any complexities that impact the estimate significantly are surfaced.
+
+### Covering more than just development
+
+It can be a common blind spot for developers to only consider the development work up to the initial PR in the estimate. Stepping back for a second it should be common sense that this isn't going to provide a faithful indication of the actual amount of time that will be spent on the task. For that to happen the estimate needs to include all the time and activities required to meet your team's Definition of Done (DoD). That DoD will vary from team to team but will generally involve going through a code review process with some sort of feedback cycle, deployment to at least one environment and testing in those environments and all this can take quite a bit of time.
+
+That means if your DoD includes deploying to production and you've typically got to wait half a day in monolith build and release queue shared with 50 other devs that means that one-line css change will take half a day, not 5 minutes. In fact, it's useful to know upfront the true cost of making such a change because it helps make the case for creating, say, a separate front-end pipeline to massively speed up the time-to-delivery of such a change.
+
+It means that if you're working on the kind of story that you know is going to attract a lot of comments, revisions and back-and-forth in the code review process, say, a story that involves laying down a lot of core infrastructure that will be used in future stories and is important to get right, then that also needs to be taken into account.
+
+If this is something your team is struggling with then I can suggest a heuristic to get started with. Assume that the dev work up to the initial PR will only account for 1/2 to 2/3 of the total estimate. The rest will be needed for code review and responding to feedback, deployment, testing and responding to issues found in testing. If you've only been considering first cut dev work in your estimates then it might be time to double them.
 
 ### Providing visualisations
 
@@ -53,11 +64,11 @@ This can be done by adding a spike story to the backlog first with the aim of re
 
 ### Avoiding unexpected complexity
 
-Along with missing requirements and on-the-fly business analysis that inevitably has to happen, another major contributor to poor estimates is complexities that arise mid story (or as Donald Rumsfeld would like to call them, "unknown unknowns"). These can cause stories to properly blow out and be a major source of frustration for the developer and the team because they can completely change the picture of how much work is involved. Therefore it's important to try and surface these complexities upfront if we want to improve our estimates.
+Another major contributor to poor estimates is complexities that arise mid story (or as Donald Rumsfeld would like to call them, "unknown unknowns"). These can cause stories to properly blow out and be a major source of frustration for the developer and the team because they can completely change the picture of how much work is involved. Therefore it's important to try and surface these complexities upfront if we want to improve our estimates.
 
 As mentioned earlier, coming up with requirements and writing user stories can be hard. They can also involve significant technical challenges and that's why it's useful to get technical input into the story from a lead or senior engineer. One way of doing this is for the Product Owner or Business Analyst to write all the functional requirements first and then get input from a technical person in a pre-refinement session (refinement being the session where the estimation takes place). This way the technical person can confirm whether it's technically possible or flag any potential technical challenges that might make the story much more involved than it first seems. Equally as important, the technical person can add these details and possibly even some implementation guidelines to the story so that the rest of the team can properly understand the scale of the work required when it comes time to estimate.
 
-### Proper use of sessions to estimate
+### Proper use of estimation sessions
 
 Anyone who's been in an hour long meeting knows how hard it is to maintain focus throughout the whole thing. So it should come as no surprise that 4-hour-long sprint planning sessions at the beginning of the sprint that aim to estimate all the stories, prioritise them and work out which ones can be brought into the sprint don't lead to good estimates. Even after 2 hours devs will do or say almost anything to make the pain go away and they certainly won't be focused enough to estimate well. It's enough of a task simply prioritising the stories and working out which ones should be brought into the sprint. This should be the focus of sprint planning. The stories should already be estimated by that point and the easiest way to do this is by holding regular refinement sessions of no more than an hour throughout the sprint.
 
@@ -71,33 +82,26 @@ Now that we've looked at various ways we can improve our estimates let's look at
 
 It can be hard to write good stories and ensure that you've included in the story all the things that you need to include to support the estimation process. That's where using a story template can help. An example of such a template is as follows:
 
-```
-STATEMENT
-As a... I want... so that
-
-CONTEXT
-
-REQUIREMENTS
-
-DESIGN NOTES
-
-IMPLEMENTATION NOTES
-
-ACCEPTANCE CRITERIA
-```
+![Image: user story estimate](/assets/images/how-to-estimate-better/user-story-template.png)
 
 Having clear headings ensures that all stories have a clear structure the team is used to and nothing is missed. Not all headings are needed all the time and so can be removed but at least you have a solid foundation to start from.
 
 Here's some further explanation of some of the headings:
 
-- `CONTEXT`: sometimes it's useful to have some background information to the story, i.e. why it's needed in the first place and what problems it solves. Sometimes this can lead engineers to challenge whether the story is the best solution for the problem, which is a great discussion to have.
-- `DESIGN NOTES`: this is where links or images of wireframes and designs can go as well as any notes that aren't captures in those documents. E.g. requirements around responsiveness, supports media, browser, accessibillity, etc
-- `IMPLEMENTATION NOTES`: this is where the technical input from the pre-refinement goes or it could be findings from a spike that previously explored the best way to solve a technical challenge. This is the part that helps surface any hidden complexity so that devs can get a better sense of the scale of the work.
+- **CONTEXT**: sometimes it's useful to have some background information to the story, i.e. why it's needed in the first place and what problems it solves. Sometimes this can lead engineers to challenge whether the story is the best solution for the problem, which is a great discussion to have.
+- **SCOPE**: this section allows you to spell out exactly what is included and is not included in the story. This can provide a high-level overview of the scale of the story and is particularly useful for estimation. E.g.
+  - Add a new form to the front end
+  - Add a new api endpoint to return a list of customers
+  - Add a new api endpoint to update an invoice
+  - Doesn't include the cancel changes modal (which is covered in...)
+- **DESIGN NOTES**: this is where links or images of wireframes and designs can go as well as any notes that aren't captures in those documents. E.g. requirements around responsiveness, supports media, browser, accessibillity, etc
+- **IMPLEMENTATION NOTES**: this is where the technical input from the pre-refinement goes or it could be findings from a spike that previously explored the best way to solve a technical challenge. This is the part that helps surface any hidden complexity so that devs can get a better sense of the scale of the work.
 
 ### Conclusion
 
 Coming up with good estimates can initially be hard but it's worth it and, like anything, it can quickly become a habit and become ingrained in the culture of the team. This post covered a few different strategies for improving the quality of our estimates, which in summary are:
 
+- Including all the activites required to meet the Definition of Done, not just the initial development
 - Improving the quality of the user stories and ensuring all requirements are captured
 - Providing visuals such as wireframes, mockups or designs for UI stories or architecture diagrams for backend stories
 - Tactical use of spike stories to reduce uncertainty before scoping out the actual story

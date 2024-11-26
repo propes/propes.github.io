@@ -2,7 +2,7 @@
 layout: post
 title: "Why good user story estimates matter"
 date: 2023-06-21 11:00:00 +1000
-tag: agile
+tag: agile, user stories
 ---
 
 _Note: this post doesn't wade into the debate about having no estimates (e.g. the #NoEstimates movement). It starts from the assumption that the team has decided or needs to estimate user stories._
@@ -21,7 +21,7 @@ I'd like to make the case that good estimates matter because they enable develop
 
 ![Chart: Not Completed to Estimate](/assets/images/why-estimates-matter/chart-not-completed-to-estimate.png)
 
-In the first scenario, the story is well estimated and the developer completes it on time. In this case motivation and anxiety stay pretty constant the whole way through. In the second scenario, the story is poorly estimated. As often happens there's a point of realisation midway through completing the story when complexities emerge and the dev realises they're not going to get the story done on time. It's at this point that motivation starts to drop and anxiety rises. The decrease in motivation and increased anxiety negatively affect productively thereby compounding the problem and so the story gets finished much later than estimated. In addition, corners may get cut, reducing quality. The dev eventually finishes the story but the feeling afterwards can be one of failure rather than success. Rather than picking up the next story on a high and carrying momentum, they're feeling dejected and demotivated. This can cycle from story to story and eventually leads to an underperforming team.
+In the first scenario, the story is well estimated and the developer completes it on time. In this case motivation and anxiety stay pretty constant the whole way through. In the second scenario, the story is poorly estimated. As often happens there's a point of realisation midway through completing the story when complexities emerge and the dev realises they're not going to get the story done on time. It's at this point that motivation starts to drop and anxiety rises. The decrease in motivation and increased anxiety negatively affect productively thereby compounding the problem and so the story gets finished much later than estimated. In addition, corners may get cut, reducing quality. The dev eventually finishes the story but the feeling afterwards can be one of failure rather than success. Rather than picking up the next story on a high and carrying momentum, they're feeling dejected and demotivated. This can cycle from story to story and eventually leads to a demoralised and underperforming team.
 
 The antidote to this are stories that are well estimated. As well as giving a more realistic picture of the team's workload, enabling better planning and prioritisation, it also keeps developer wellbeing high and happy devs are productive devs.
 
